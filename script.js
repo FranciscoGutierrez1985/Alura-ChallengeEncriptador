@@ -88,6 +88,13 @@ function esVocal(palabra){
   return resultado;   
  }
 
+ function copiar(){
+    let copiado = document.getElementById('resultado').value;
+    document.getElementById('textoAEncriptar').value = copiado;
+    console.log(copiado);
+  }
+ 
+
 let valorEncriptado="";
  function mostrarEncriptado(){
     const valorAEncriptar = (document.getElementById('textoAEncriptar').value).toLowerCase();
@@ -96,6 +103,7 @@ let valorEncriptado="";
     document.getElementById('textoAEncriptar').value="";
     document.getElementById('rectangulo').style.display ="none";
     document.getElementById('resultado').style.display = "inline";
+    document.getElementById('copiar').style.display = "inline";
  }
 
  let buttonEncriptar = document.getElementById('encriptar');
@@ -109,8 +117,12 @@ let valorEncriptado="";
     document.getElementById('textoAEncriptar').value="";
     document.getElementById('rectangulo').style.display ="none";
     document.getElementById('resultado').style.display = "inline";
+    document.getElementById('copiar').style.display = "inline";
  }
  
  let buttonDesencriptar = document.getElementById('desencriptar');
  buttonDesencriptar.onclick = mostrarDesencriptar;
+
+ let buttonCopiar = document.getElementById('copiar');
+ buttonCopiar.onclick = copiar;
  
