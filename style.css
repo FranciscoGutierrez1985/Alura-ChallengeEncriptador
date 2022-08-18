@@ -13,6 +13,14 @@ body{
     left: 40px;
     top: 40px;
   }
+
+  h1{
+    position: absolute;
+    left: 750px;
+    font-size: 45px;
+    font-family: "Helvetica Neue", "Helvetica";
+    
+  }
   
   .botones{
     display:flex;
